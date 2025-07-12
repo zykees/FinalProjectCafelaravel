@@ -1,0 +1,36 @@
+/* ทำให้ * แสดงใน label ที่ต้องกรอก */
+.required:after {
+    content: ' *';
+    color: red;
+}
+
+/* ปรับขนาด badge */
+.badge {
+    font-size: 90%;
+}
+
+/* ปรับขนาดรูปภาพในตาราง */
+.img-thumbnail {
+    max-width: 50px;
+}
+
+/* ปรับ table ให้ดูสวย */
+.table th, .table td {
+    vertical-align: middle;
+}
+
+/* ปรับปุ่ม spinner */
+.btn .spinner-border {
+    margin-right: 0.5rem;
+}
+
+/* ปรับ card header */
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+/* ปรับ textarea */
+textarea.form-control {
+    resize: vertical;
+}

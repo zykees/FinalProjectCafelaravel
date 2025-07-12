@@ -1,0 +1,16 @@
+.badge {
+    font-size: 85%;
+}
+.table th {
+    background-color: #f8f9fc;
+}
+.required:after {
+    content: ' *';
+    color: red;
+}
+.btn .spinner-border {
+    margin-right: 0.5rem;
+}
+.img-thumbnail {
+    max-width: 50px;
+}

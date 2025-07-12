@@ -1,0 +1,67 @@
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    font-weight: 600;
+    color: #4e73df;
+}
+
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.badge {
+    font-size: 90%;
+    padding: 0.5em 0.8em;
+}
+
+.img-fluid.rounded {
+    max-width: 220px;
+    border: 1px solid #e3e6f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.btn-sm {
+    font-size: 0.95rem;
+    padding: 0.3rem 0.7rem;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+select.form-select, input.form-control, textarea.form-control {
+    border-radius: 0.4rem;
+}
+
+.modal-content {
+    border-radius: 0.7rem;
+}
+
+.modal-title {
+    color: #4e73df;
+    font-weight: 600;
+}
+
+.table thead th {
+    background-color: #f8f9fc;
+    border-bottom: 2px solid #e3e6f0;
+}
+
+.table-bordered > :not(caption) > * > * {
+    border-width: 1px;
+}
+
+@media (max-width: 767.98px) {
+    .card-header, .modal-title {
+        font-size: 1rem;
+    }
+    .btn-sm {
+        font-size: 0.9rem;
+    }
+}

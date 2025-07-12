@@ -1,0 +1,28 @@
+        .sidebar {
+            transition: all 0.3s;
+        }
+        .sidebar.active {
+            margin-left: -250px;
+        }
+        .content {
+            transition: all 0.3s;
+        }
+        .card-header {
+            background-color: #f8f9fc;
+            border-bottom: 1px solid #e3e6f0;
+        }
+        .border-left-primary {
+            border-left: 4px solid #4e73df;
+        }
+        .border-left-success {
+            border-left: 4px solid #1cc88a;
+        }
+        .border-left-info {
+            border-left: 4px solid #36b9cc;
+        }
+        .border-left-warning {
+            border-left: 4px solid #f6c23e;
+        }
+        .border-left-danger{
+            border-left: 4px solid #f63e3e;
+        }

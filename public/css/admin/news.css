@@ -1,0 +1,22 @@
+.table th, .table td {
+    vertical-align: middle;
+}
+.badge {
+    font-size: 90%;
+}
+.img-thumbnail {
+    max-width: 200px;
+}
+.form-label {
+    font-weight: 500;
+}
+.invalid-feedback {
+    font-size: 0.95em;
+}
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+}
+textarea.form-control {
+    resize: vertical;
+}

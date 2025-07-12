@@ -1,0 +1,7 @@
+.img-thumbnail { cursor: pointer; transition: transform 0.2s; }
+.img-thumbnail:hover { transform: scale(1.1); }
+.stat-card { border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 1.25rem 1rem; margin-bottom: 1.5rem; background: #fff; transition: box-shadow 0.2s; }
+.stat-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.10); }
+.stat-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.badge { font-size: 90%; }
+.promotion-image { max-width: 100%; height: auto; border-radius: 0.5rem; }

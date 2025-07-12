@@ -1,0 +1,9 @@
+.pagination .page-link {
+    padding: 0.25rem 0.7rem;
+    font-size: 0.95rem;
+    min-width: 32px;
+    min-height: 32px;
+}
+.pagination .page-item {
+    margin: 0 2px;
+}
