@@ -136,11 +136,12 @@ class ProductController extends Controller
             $data['slug'] = Str::slug($request->name);
             $data['featured'] = $request->has('featured');
 
-            if ($request->hasFile('image')) {
+if ($request->hasFile('image')) {
     $file = $request->file('image');
-    $uploadedFileUrl = Cloudinary::upload($file->getRealPath(), [
+    $uploadedFile = Cloudinary::upload($file->getRealPath(), [
         'folder' => 'Projectcafe_Products'
-    ])->getSecurePath();
+    ]);
+    $uploadedFileUrl = $uploadedFile->getSecurePath();
     if ($uploadedFileUrl) {
         $data['image'] = $uploadedFileUrl;
     } else {
@@ -148,7 +149,6 @@ class ProductController extends Controller
         return back()->withInput()->with('error', 'อัปโหลดรูปภาพไป Cloudinary ไม่สำเร็จ');
     }
 }
-
             Product::create($data);
 
             DB::commit();
