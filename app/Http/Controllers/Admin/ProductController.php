@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 class ProductController extends Controller
 {
     public function __construct()
@@ -137,16 +137,17 @@ class ProductController extends Controller
             $data['featured'] = $request->has('featured');
 
             if ($request->hasFile('image')) {
-                $file = $request->file('image');
-                $publicId = Storage::disk('cloudinary')->putFile('Projectcafe_Products', $file);
-                if ($publicId) {
-                    $cloudName = env('CLOUDINARY_CLOUD_NAME');
-                    $data['image'] = "https://res.cloudinary.com/{$cloudName}/image/upload/{$publicId}";
-                } else {
-                    DB::rollBack();
-                    return back()->withInput()->with('error', 'อัปโหลดรูปภาพไป Cloudinary ไม่สำเร็จ');
-                }
-            }
+    $file = $request->file('image');
+    $uploadedFileUrl = Cloudinary::upload($file->getRealPath(), [
+        'folder' => 'Projectcafe_Products'
+    ])->getSecurePath();
+    if ($uploadedFileUrl) {
+        $data['image'] = $uploadedFileUrl;
+    } else {
+        DB::rollBack();
+        return back()->withInput()->with('error', 'อัปโหลดรูปภาพไป Cloudinary ไม่สำเร็จ');
+    }
+}
 
             Product::create($data);
 
