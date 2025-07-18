@@ -304,8 +304,8 @@ public function export($type, Request $request)
     $dompdf->set_option('dpi', 150);
     
     // เพิ่มการตั้งค่า font path
-    $dompdf->set_option('fontDir', public_path('fonts/'));
-    $dompdf->set_option('fontCache', storage_path('fonts/'));
+$dompdf->set_option('fontDir', storage_path('fonts/'));
+$dompdf->set_option('fontCache', storage_path('fonts/'));
     
     $pdf->setPaper('a4', 'landscape');
     
