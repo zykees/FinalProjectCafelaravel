@@ -116,7 +116,9 @@ public function show(Order $order)
         }
 
         $pdf = PDF::loadView('User.orders.quotation', compact('order'));
-        return $pdf->download("ใบเสนอราคา-{$order->order_code}.pdf");
+        $pdf->set_option('fontDir', storage_path('fonts/'));
+        $pdf->set_option('fontCache', storage_path('fonts/'));
+        return $pdf->stream("ใบเสนอราคา-{$order->order_code}.pdf");
     }
 
    
