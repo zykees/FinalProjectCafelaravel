@@ -1,7 +1,7 @@
 <?php
 return [
     // กำหนด path สำหรับฟอนต์
-    'font_dir' => storage_path('fonts/'),
+    'font_dir' => public_path('fonts/'),
     'font_cache' => storage_path('fonts/'),
   
     
