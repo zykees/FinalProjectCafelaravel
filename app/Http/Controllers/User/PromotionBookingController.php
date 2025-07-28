@@ -432,9 +432,9 @@ class PromotionBookingController extends Controller
             ]);
 
             $filename = 'quotation-' . $booking->booking_code . '.pdf';
-            $pdf->set_option('fontDir', storage_path('fonts/'));
-            $pdf->set_option('fontCache', storage_path('fonts/'));
-            return $pdf->download($filename);
+          $pdf->set_option('fontDir', storage_path('fonts/'));
+          $pdf->set_option('fontCache', storage_path('fonts/'));
+            return $pdf->stream($filename);
 
         } catch (\Exception $e) {
             return back()->with('error', 'ไม่สามารถดาวน์โหลดใบเสนอราคาได้: ' . $e->getMessage());
